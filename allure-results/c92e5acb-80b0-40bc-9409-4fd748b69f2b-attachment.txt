@@ -1,0 +1,13 @@
+
+
+------------------------------------------------------------
+Classe de Teste: validateInvalidNumberPTBR
+
+
+---> Body a enviar: 
+
+--->Resposta da chamada: {"extenso": "Invalid data"}
+
+--->Verificando se o status retornado: 400 |É igual a: 400 |
+
+--->Verificando se o texto esperado: Invalid data |É igual a: Invalid data|

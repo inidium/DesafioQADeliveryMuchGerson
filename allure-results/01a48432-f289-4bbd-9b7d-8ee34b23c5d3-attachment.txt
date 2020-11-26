@@ -1,0 +1,11 @@
+
+
+------------------------------------------------------------
+Classe de Teste: validateInvalidNumberENUS
+
+
+---> Body a enviar: 
+
+--->Resposta da chamada: {"full": "Invalid data"}
+
+--->Verificando se o status retornado: 401 |É igual a: 400 |

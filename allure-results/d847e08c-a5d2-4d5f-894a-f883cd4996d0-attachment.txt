@@ -1,0 +1,11 @@
+
+
+------------------------------------------------------------
+Classe de Teste: validateStatusCodeENUS
+
+
+---> Body a enviar: 
+
+--->Resposta da chamada: {"full": "minus five"}
+
+--->Verificando se o status retornado: 200 |É igual a: 200 |

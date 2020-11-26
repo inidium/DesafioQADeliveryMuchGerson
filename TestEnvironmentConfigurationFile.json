@@ -1,0 +1,32 @@
+{
+	"HttpConfigs" : {
+		"protocol" : "http",
+		"host" : "challengeqa.staging.devmuch.io",
+		"port" : "",
+		"patch" : "",
+		"version" : "",
+		"typeRequest" : ""
+	},
+	"UIEnvConfigs" : {
+		"driverPath" : "",
+		"navegador" : "",
+		"urlInitial" : "",
+		"exibirNavegador" : "",
+		"maximizarNavegador" : "",
+		"sleepTime" : "",
+		"timeOutTime" : ""
+	},
+	"ambinetConfigs" : {
+		"username" : "",
+		"password" : ""
+	},
+	"dataBasesConfig" : {
+		"databaseType" : "",
+		"host" : "",
+		"port" : "",
+		"base" : "",
+		"schemaName" : "",
+		"user" : "",
+		"password" : ""
+	}
+}

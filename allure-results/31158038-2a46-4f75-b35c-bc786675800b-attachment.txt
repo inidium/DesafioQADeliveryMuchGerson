@@ -1,0 +1,11 @@
+
+
+------------------------------------------------------------
+Classe de Teste: validateNumberExtensionENUS
+
+
+---> Body a enviar: 
+
+--->Resposta da chamada: {"full": "seven"}
+
+--->Verificando se o texto esperado: seven |É igual a: seven|
