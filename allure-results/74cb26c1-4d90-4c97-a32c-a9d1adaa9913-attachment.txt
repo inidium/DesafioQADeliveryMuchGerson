@@ -1,0 +1,11 @@
+
+
+------------------------------------------------------------
+Classe de Teste: validateNumberExtensionPTBR
+
+
+---> Body a enviar: 
+
+--->Resposta da chamada: {"extenso": "cinco"}
+
+--->Verificando se o texto esperado: cinco |É igual a: cinco|

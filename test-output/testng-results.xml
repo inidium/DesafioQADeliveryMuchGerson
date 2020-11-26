@@ -1,29 +1,614 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="2" total="10" passed="8" failed="0" skipped="0">
+<testng-results ignored="1" total="35" passed="33" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2020-11-26T07:09:08 BRT" name="Default suite" finished-at="2020-11-26T07:09:13 BRT" duration-ms="5188">
+  <suite started-at="2020-11-26T08:45:32 BRT" name="Default suite" finished-at="2020-11-26T08:45:50 BRT" duration-ms="17803">
     <groups>
     </groups>
-    <test started-at="2020-11-26T07:09:08 BRT" name="Default test" finished-at="2020-11-26T07:09:13 BRT" duration-ms="5188">
-      <class name="deliverymuchbrasil.com.automation_test.ValidateExtendNumberPTBR">
-        <test-method is-config="true" signature="initialEngine()[pri:0, instance:deliverymuchbrasil.com.automation_test.ValidateExtendNumberPTBR@38ba6ce3]" started-at="2020-11-26T07:09:08 BRT" name="initialEngine" finished-at="2020-11-26T07:09:08 BRT" duration-ms="13" status="PASS">
+    <test started-at="2020-11-26T08:45:32 BRT" name="Default test" finished-at="2020-11-26T08:45:50 BRT" duration-ms="17803">
+      <class name="deliverymuchbrasil.com.automation_test.ValidateExtendNumberENUS">
+        <test-method is-config="true" signature="initialEngine()[pri:0, instance:deliverymuchbrasil.com.automation_test.ValidateExtendNumberENUS@479ceda0]" started-at="2020-11-26T08:45:32 BRT" name="initialEngine" finished-at="2020-11-26T08:45:32 BRT" duration-ms="12" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialEngine -->
-        <test-method is-config="true" signature="resetRelatorioAntesDaClasse()[pri:0, instance:deliverymuchbrasil.com.automation_test.ValidateExtendNumberPTBR@38ba6ce3]" started-at="2020-11-26T07:09:08 BRT" name="resetRelatorioAntesDaClasse" finished-at="2020-11-26T07:09:08 BRT" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="resetRelatorioAntesDaClasse()[pri:0, instance:deliverymuchbrasil.com.automation_test.ValidateExtendNumberENUS@479ceda0]" started-at="2020-11-26T08:45:32 BRT" name="resetRelatorioAntesDaClasse" finished-at="2020-11-26T08:45:32 BRT" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- resetRelatorioAntesDaClasse -->
-        <test-method is-config="true" signature="resetRelatorioAntesDoMétodo()[pri:0, instance:deliverymuchbrasil.com.automation_test.ValidateExtendNumberPTBR@38ba6ce3]" started-at="2020-11-26T07:09:08 BRT" name="resetRelatorioAntesDoMétodo" finished-at="2020-11-26T07:09:08 BRT" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="resetRelatorioAntesDoMétodo()[pri:0, instance:deliverymuchbrasil.com.automation_test.ValidateExtendNumberENUS@479ceda0]" started-at="2020-11-26T08:45:32 BRT" name="resetRelatorioAntesDoMétodo" finished-at="2020-11-26T08:45:32 BRT" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- resetRelatorioAntesDoMétodo -->
-        <test-method signature="validateNumberExtensionPTBR(java.lang.String, java.lang.String)[pri:0, instance:deliverymuchbrasil.com.automation_test.ValidateExtendNumberPTBR@38ba6ce3]" started-at="2020-11-26T07:09:08 BRT" name="validateNumberExtensionPTBR" description="Valida extensão dos números URL - pt_BR" data-provider="extensionData" finished-at="2020-11-26T07:09:10 BRT" duration-ms="1565" status="PASS">
+        <test-method signature="validateInvalidNumberENUS()[pri:0, instance:deliverymuchbrasil.com.automation_test.ValidateExtendNumberENUS@479ceda0]" started-at="2020-11-26T08:45:32 BRT" name="validateInvalidNumberENUS" description="Valida Código Cenário Inválido" finished-at="2020-11-26T08:45:34 BRT" duration-ms="1497" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[
+Expecting:
+ <400>
+to be equal to:
+ <401>
+but was not.]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: 
+Expecting:
+ <400>
+to be equal to:
+ <401>
+but was not.
+at quimera.test.utilities.assertion.RestAssertion.isEqualStatusCode(RestAssertion.java:29)
+at deliverymuchbrasil.com.automation_test.ValidateExtendNumberENUS.validateInvalidNumberENUS(ValidateExtendNumberENUS.java:37)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:584)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:172)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:804)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:145)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+at org.testng.TestRunner.privateRun(TestRunner.java:770)
+at org.testng.TestRunner.run(TestRunner.java:591)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
+at org.testng.TestNG.runSuites(TestNG.java:1032)
+at org.testng.TestNG.run(TestNG.java:1000)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateInvalidNumberENUS -->
+        <test-method is-config="true" signature="finalizaTesteAtual(java.lang.reflect.Method)[pri:0, instance:deliverymuchbrasil.com.automation_test.ValidateExtendNumberENUS@479ceda0]" started-at="2020-11-26T08:45:34 BRT" name="finalizaTesteAtual" finished-at="2020-11-26T08:45:34 BRT" duration-ms="14" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[10]]>
+                <![CDATA[public void deliverymuchbrasil.com.automation_test.ValidateExtendNumberENUS.validateInvalidNumberENUS()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- finalizaTesteAtual -->
+        <test-method is-config="true" signature="resetRelatorioAntesDoMétodo()[pri:0, instance:deliverymuchbrasil.com.automation_test.ValidateExtendNumberENUS@479ceda0]" started-at="2020-11-26T08:45:34 BRT" name="resetRelatorioAntesDoMétodo" finished-at="2020-11-26T08:45:34 BRT" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- resetRelatorioAntesDoMétodo -->
+        <test-method signature="validateNumberExtensionENUS(java.lang.String, java.lang.String)[pri:0, instance:deliverymuchbrasil.com.automation_test.ValidateExtendNumberENUS@479ceda0]" started-at="2020-11-26T08:45:34 BRT" name="validateNumberExtensionENUS" description="Valida extensão dos números URL - en_US" data-provider="extensionData" finished-at="2020-11-26T08:45:34 BRT" duration-ms="688" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[5]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[200]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateNumberExtensionENUS -->
+        <test-method is-config="true" signature="finalizaTesteAtual(java.lang.reflect.Method)[pri:0, instance:deliverymuchbrasil.com.automation_test.ValidateExtendNumberENUS@479ceda0]" started-at="2020-11-26T08:45:34 BRT" name="finalizaTesteAtual" finished-at="2020-11-26T08:45:34 BRT" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void deliverymuchbrasil.com.automation_test.ValidateExtendNumberENUS.validateNumberExtensionENUS(java.lang.String,java.lang.String)]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- finalizaTesteAtual -->
+        <test-method is-config="true" signature="resetRelatorioAntesDoMétodo()[pri:0, instance:deliverymuchbrasil.com.automation_test.ValidateExtendNumberENUS@479ceda0]" started-at="2020-11-26T08:45:34 BRT" name="resetRelatorioAntesDoMétodo" finished-at="2020-11-26T08:45:34 BRT" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- resetRelatorioAntesDoMétodo -->
+        <test-method signature="validateNumberExtensionENUS(java.lang.String, java.lang.String)[pri:0, instance:deliverymuchbrasil.com.automation_test.ValidateExtendNumberENUS@479ceda0]" started-at="2020-11-26T08:45:34 BRT" name="validateNumberExtensionENUS" description="Valida extensão dos números URL - en_US" data-provider="extensionData" finished-at="2020-11-26T08:45:35 BRT" duration-ms="481" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[6]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[200]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateNumberExtensionENUS -->
+        <test-method is-config="true" signature="finalizaTesteAtual(java.lang.reflect.Method)[pri:0, instance:deliverymuchbrasil.com.automation_test.ValidateExtendNumberENUS@479ceda0]" started-at="2020-11-26T08:45:35 BRT" name="finalizaTesteAtual" finished-at="2020-11-26T08:45:35 BRT" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void deliverymuchbrasil.com.automation_test.ValidateExtendNumberENUS.validateNumberExtensionENUS(java.lang.String,java.lang.String)]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- finalizaTesteAtual -->
+        <test-method is-config="true" signature="resetRelatorioAntesDoMétodo()[pri:0, instance:deliverymuchbrasil.com.automation_test.ValidateExtendNumberENUS@479ceda0]" started-at="2020-11-26T08:45:35 BRT" name="resetRelatorioAntesDoMétodo" finished-at="2020-11-26T08:45:35 BRT" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- resetRelatorioAntesDoMétodo -->
+        <test-method signature="validateNumberExtensionENUS(java.lang.String, java.lang.String)[pri:0, instance:deliverymuchbrasil.com.automation_test.ValidateExtendNumberENUS@479ceda0]" started-at="2020-11-26T08:45:35 BRT" name="validateNumberExtensionENUS" description="Valida extensão dos números URL - en_US" data-provider="extensionData" finished-at="2020-11-26T08:45:35 BRT" duration-ms="483" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[7]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[200]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateNumberExtensionENUS -->
+        <test-method is-config="true" signature="finalizaTesteAtual(java.lang.reflect.Method)[pri:0, instance:deliverymuchbrasil.com.automation_test.ValidateExtendNumberENUS@479ceda0]" started-at="2020-11-26T08:45:35 BRT" name="finalizaTesteAtual" finished-at="2020-11-26T08:45:35 BRT" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void deliverymuchbrasil.com.automation_test.ValidateExtendNumberENUS.validateNumberExtensionENUS(java.lang.String,java.lang.String)]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- finalizaTesteAtual -->
+        <test-method is-config="true" signature="resetRelatorioAntesDoMétodo()[pri:0, instance:deliverymuchbrasil.com.automation_test.ValidateExtendNumberENUS@479ceda0]" started-at="2020-11-26T08:45:35 BRT" name="resetRelatorioAntesDoMétodo" finished-at="2020-11-26T08:45:35 BRT" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- resetRelatorioAntesDoMétodo -->
+        <test-method signature="validateNumberExtensionENUS(java.lang.String, java.lang.String)[pri:0, instance:deliverymuchbrasil.com.automation_test.ValidateExtendNumberENUS@479ceda0]" started-at="2020-11-26T08:45:35 BRT" name="validateNumberExtensionENUS" description="Valida extensão dos números URL - en_US" data-provider="extensionData" finished-at="2020-11-26T08:45:36 BRT" duration-ms="484" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[8]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[200]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateNumberExtensionENUS -->
+        <test-method is-config="true" signature="finalizaTesteAtual(java.lang.reflect.Method)[pri:0, instance:deliverymuchbrasil.com.automation_test.ValidateExtendNumberENUS@479ceda0]" started-at="2020-11-26T08:45:36 BRT" name="finalizaTesteAtual" finished-at="2020-11-26T08:45:36 BRT" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void deliverymuchbrasil.com.automation_test.ValidateExtendNumberENUS.validateNumberExtensionENUS(java.lang.String,java.lang.String)]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- finalizaTesteAtual -->
+        <test-method is-config="true" signature="resetRelatorioAntesDoMétodo()[pri:0, instance:deliverymuchbrasil.com.automation_test.ValidateExtendNumberENUS@479ceda0]" started-at="2020-11-26T08:45:36 BRT" name="resetRelatorioAntesDoMétodo" finished-at="2020-11-26T08:45:36 BRT" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- resetRelatorioAntesDoMétodo -->
+        <test-method signature="validateNumberExtensionENUS(java.lang.String, java.lang.String)[pri:0, instance:deliverymuchbrasil.com.automation_test.ValidateExtendNumberENUS@479ceda0]" started-at="2020-11-26T08:45:36 BRT" name="validateNumberExtensionENUS" description="Valida extensão dos números URL - en_US" data-provider="extensionData" finished-at="2020-11-26T08:45:36 BRT" duration-ms="479" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[-5]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[200]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateNumberExtensionENUS -->
+        <test-method is-config="true" signature="finalizaTesteAtual(java.lang.reflect.Method)[pri:0, instance:deliverymuchbrasil.com.automation_test.ValidateExtendNumberENUS@479ceda0]" started-at="2020-11-26T08:45:36 BRT" name="finalizaTesteAtual" finished-at="2020-11-26T08:45:36 BRT" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void deliverymuchbrasil.com.automation_test.ValidateExtendNumberENUS.validateNumberExtensionENUS(java.lang.String,java.lang.String)]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- finalizaTesteAtual -->
+        <test-method is-config="true" signature="resetRelatorioAntesDoMétodo()[pri:0, instance:deliverymuchbrasil.com.automation_test.ValidateExtendNumberENUS@479ceda0]" started-at="2020-11-26T08:45:36 BRT" name="resetRelatorioAntesDoMétodo" finished-at="2020-11-26T08:45:36 BRT" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- resetRelatorioAntesDoMétodo -->
+        <test-method signature="validateNumberExtensionENUS(java.lang.String, java.lang.String)[pri:0, instance:deliverymuchbrasil.com.automation_test.ValidateExtendNumberENUS@479ceda0]" started-at="2020-11-26T08:45:36 BRT" name="validateNumberExtensionENUS" description="Valida extensão dos números URL - en_US" data-provider="extensionData" finished-at="2020-11-26T08:45:37 BRT" duration-ms="484" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[-6]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[200]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateNumberExtensionENUS -->
+        <test-method is-config="true" signature="finalizaTesteAtual(java.lang.reflect.Method)[pri:0, instance:deliverymuchbrasil.com.automation_test.ValidateExtendNumberENUS@479ceda0]" started-at="2020-11-26T08:45:37 BRT" name="finalizaTesteAtual" finished-at="2020-11-26T08:45:37 BRT" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void deliverymuchbrasil.com.automation_test.ValidateExtendNumberENUS.validateNumberExtensionENUS(java.lang.String,java.lang.String)]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- finalizaTesteAtual -->
+        <test-method is-config="true" signature="resetRelatorioAntesDoMétodo()[pri:0, instance:deliverymuchbrasil.com.automation_test.ValidateExtendNumberENUS@479ceda0]" started-at="2020-11-26T08:45:37 BRT" name="resetRelatorioAntesDoMétodo" finished-at="2020-11-26T08:45:37 BRT" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- resetRelatorioAntesDoMétodo -->
+        <test-method signature="validateNumberExtensionENUS(java.lang.String, java.lang.String)[pri:0, instance:deliverymuchbrasil.com.automation_test.ValidateExtendNumberENUS@479ceda0]" started-at="2020-11-26T08:45:37 BRT" name="validateNumberExtensionENUS" description="Valida extensão dos números URL - en_US" data-provider="extensionData" finished-at="2020-11-26T08:45:37 BRT" duration-ms="491" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[-7]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[200]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateNumberExtensionENUS -->
+        <test-method is-config="true" signature="finalizaTesteAtual(java.lang.reflect.Method)[pri:0, instance:deliverymuchbrasil.com.automation_test.ValidateExtendNumberENUS@479ceda0]" started-at="2020-11-26T08:45:37 BRT" name="finalizaTesteAtual" finished-at="2020-11-26T08:45:37 BRT" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void deliverymuchbrasil.com.automation_test.ValidateExtendNumberENUS.validateNumberExtensionENUS(java.lang.String,java.lang.String)]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- finalizaTesteAtual -->
+        <test-method is-config="true" signature="resetRelatorioAntesDoMétodo()[pri:0, instance:deliverymuchbrasil.com.automation_test.ValidateExtendNumberENUS@479ceda0]" started-at="2020-11-26T08:45:37 BRT" name="resetRelatorioAntesDoMétodo" finished-at="2020-11-26T08:45:37 BRT" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- resetRelatorioAntesDoMétodo -->
+        <test-method signature="validateNumberExtensionENUS(java.lang.String, java.lang.String)[pri:0, instance:deliverymuchbrasil.com.automation_test.ValidateExtendNumberENUS@479ceda0]" started-at="2020-11-26T08:45:37 BRT" name="validateNumberExtensionENUS" description="Valida extensão dos números URL - en_US" data-provider="extensionData" finished-at="2020-11-26T08:45:38 BRT" duration-ms="489" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[-8]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[200]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateNumberExtensionENUS -->
+        <test-method is-config="true" signature="finalizaTesteAtual(java.lang.reflect.Method)[pri:0, instance:deliverymuchbrasil.com.automation_test.ValidateExtendNumberENUS@479ceda0]" started-at="2020-11-26T08:45:38 BRT" name="finalizaTesteAtual" finished-at="2020-11-26T08:45:38 BRT" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void deliverymuchbrasil.com.automation_test.ValidateExtendNumberENUS.validateNumberExtensionENUS(java.lang.String,java.lang.String)]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- finalizaTesteAtual -->
+        <test-method is-config="true" signature="resetRelatorioAntesDoMétodo()[pri:0, instance:deliverymuchbrasil.com.automation_test.ValidateExtendNumberENUS@479ceda0]" started-at="2020-11-26T08:45:38 BRT" name="resetRelatorioAntesDoMétodo" finished-at="2020-11-26T08:45:38 BRT" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- resetRelatorioAntesDoMétodo -->
+        <test-method signature="validateStatusCodeENUS(java.lang.String, java.lang.String)[pri:0, instance:deliverymuchbrasil.com.automation_test.ValidateExtendNumberENUS@479ceda0]" started-at="2020-11-26T08:45:38 BRT" name="validateStatusCodeENUS" description="Valida Código de Status da URL - en_US" data-provider="extensionData" finished-at="2020-11-26T08:45:38 BRT" duration-ms="480" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[5]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[200]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateStatusCodeENUS -->
+        <test-method is-config="true" signature="finalizaTesteAtual(java.lang.reflect.Method)[pri:0, instance:deliverymuchbrasil.com.automation_test.ValidateExtendNumberENUS@479ceda0]" started-at="2020-11-26T08:45:38 BRT" name="finalizaTesteAtual" finished-at="2020-11-26T08:45:38 BRT" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void deliverymuchbrasil.com.automation_test.ValidateExtendNumberENUS.validateStatusCodeENUS(java.lang.String,java.lang.String)]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- finalizaTesteAtual -->
+        <test-method is-config="true" signature="resetRelatorioAntesDoMétodo()[pri:0, instance:deliverymuchbrasil.com.automation_test.ValidateExtendNumberENUS@479ceda0]" started-at="2020-11-26T08:45:38 BRT" name="resetRelatorioAntesDoMétodo" finished-at="2020-11-26T08:45:38 BRT" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- resetRelatorioAntesDoMétodo -->
+        <test-method signature="validateStatusCodeENUS(java.lang.String, java.lang.String)[pri:0, instance:deliverymuchbrasil.com.automation_test.ValidateExtendNumberENUS@479ceda0]" started-at="2020-11-26T08:45:38 BRT" name="validateStatusCodeENUS" description="Valida Código de Status da URL - en_US" data-provider="extensionData" finished-at="2020-11-26T08:45:39 BRT" duration-ms="470" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[6]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[200]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateStatusCodeENUS -->
+        <test-method is-config="true" signature="finalizaTesteAtual(java.lang.reflect.Method)[pri:0, instance:deliverymuchbrasil.com.automation_test.ValidateExtendNumberENUS@479ceda0]" started-at="2020-11-26T08:45:39 BRT" name="finalizaTesteAtual" finished-at="2020-11-26T08:45:39 BRT" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void deliverymuchbrasil.com.automation_test.ValidateExtendNumberENUS.validateStatusCodeENUS(java.lang.String,java.lang.String)]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- finalizaTesteAtual -->
+        <test-method is-config="true" signature="resetRelatorioAntesDoMétodo()[pri:0, instance:deliverymuchbrasil.com.automation_test.ValidateExtendNumberENUS@479ceda0]" started-at="2020-11-26T08:45:39 BRT" name="resetRelatorioAntesDoMétodo" finished-at="2020-11-26T08:45:39 BRT" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- resetRelatorioAntesDoMétodo -->
+        <test-method signature="validateStatusCodeENUS(java.lang.String, java.lang.String)[pri:0, instance:deliverymuchbrasil.com.automation_test.ValidateExtendNumberENUS@479ceda0]" started-at="2020-11-26T08:45:39 BRT" name="validateStatusCodeENUS" description="Valida Código de Status da URL - en_US" data-provider="extensionData" finished-at="2020-11-26T08:45:39 BRT" duration-ms="474" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[7]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[200]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateStatusCodeENUS -->
+        <test-method is-config="true" signature="finalizaTesteAtual(java.lang.reflect.Method)[pri:0, instance:deliverymuchbrasil.com.automation_test.ValidateExtendNumberENUS@479ceda0]" started-at="2020-11-26T08:45:39 BRT" name="finalizaTesteAtual" finished-at="2020-11-26T08:45:39 BRT" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void deliverymuchbrasil.com.automation_test.ValidateExtendNumberENUS.validateStatusCodeENUS(java.lang.String,java.lang.String)]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- finalizaTesteAtual -->
+        <test-method is-config="true" signature="resetRelatorioAntesDoMétodo()[pri:0, instance:deliverymuchbrasil.com.automation_test.ValidateExtendNumberENUS@479ceda0]" started-at="2020-11-26T08:45:39 BRT" name="resetRelatorioAntesDoMétodo" finished-at="2020-11-26T08:45:39 BRT" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- resetRelatorioAntesDoMétodo -->
+        <test-method signature="validateStatusCodeENUS(java.lang.String, java.lang.String)[pri:0, instance:deliverymuchbrasil.com.automation_test.ValidateExtendNumberENUS@479ceda0]" started-at="2020-11-26T08:45:39 BRT" name="validateStatusCodeENUS" description="Valida Código de Status da URL - en_US" data-provider="extensionData" finished-at="2020-11-26T08:45:40 BRT" duration-ms="469" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[8]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[200]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateStatusCodeENUS -->
+        <test-method is-config="true" signature="finalizaTesteAtual(java.lang.reflect.Method)[pri:0, instance:deliverymuchbrasil.com.automation_test.ValidateExtendNumberENUS@479ceda0]" started-at="2020-11-26T08:45:40 BRT" name="finalizaTesteAtual" finished-at="2020-11-26T08:45:40 BRT" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void deliverymuchbrasil.com.automation_test.ValidateExtendNumberENUS.validateStatusCodeENUS(java.lang.String,java.lang.String)]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- finalizaTesteAtual -->
+        <test-method is-config="true" signature="resetRelatorioAntesDoMétodo()[pri:0, instance:deliverymuchbrasil.com.automation_test.ValidateExtendNumberENUS@479ceda0]" started-at="2020-11-26T08:45:40 BRT" name="resetRelatorioAntesDoMétodo" finished-at="2020-11-26T08:45:40 BRT" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- resetRelatorioAntesDoMétodo -->
+        <test-method signature="validateStatusCodeENUS(java.lang.String, java.lang.String)[pri:0, instance:deliverymuchbrasil.com.automation_test.ValidateExtendNumberENUS@479ceda0]" started-at="2020-11-26T08:45:40 BRT" name="validateStatusCodeENUS" description="Valida Código de Status da URL - en_US" data-provider="extensionData" finished-at="2020-11-26T08:45:40 BRT" duration-ms="472" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[-5]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[200]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateStatusCodeENUS -->
+        <test-method is-config="true" signature="finalizaTesteAtual(java.lang.reflect.Method)[pri:0, instance:deliverymuchbrasil.com.automation_test.ValidateExtendNumberENUS@479ceda0]" started-at="2020-11-26T08:45:40 BRT" name="finalizaTesteAtual" finished-at="2020-11-26T08:45:40 BRT" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void deliverymuchbrasil.com.automation_test.ValidateExtendNumberENUS.validateStatusCodeENUS(java.lang.String,java.lang.String)]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- finalizaTesteAtual -->
+        <test-method is-config="true" signature="resetRelatorioAntesDoMétodo()[pri:0, instance:deliverymuchbrasil.com.automation_test.ValidateExtendNumberENUS@479ceda0]" started-at="2020-11-26T08:45:40 BRT" name="resetRelatorioAntesDoMétodo" finished-at="2020-11-26T08:45:40 BRT" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- resetRelatorioAntesDoMétodo -->
+        <test-method signature="validateStatusCodeENUS(java.lang.String, java.lang.String)[pri:0, instance:deliverymuchbrasil.com.automation_test.ValidateExtendNumberENUS@479ceda0]" started-at="2020-11-26T08:45:40 BRT" name="validateStatusCodeENUS" description="Valida Código de Status da URL - en_US" data-provider="extensionData" finished-at="2020-11-26T08:45:41 BRT" duration-ms="481" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[-6]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[200]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateStatusCodeENUS -->
+        <test-method is-config="true" signature="finalizaTesteAtual(java.lang.reflect.Method)[pri:0, instance:deliverymuchbrasil.com.automation_test.ValidateExtendNumberENUS@479ceda0]" started-at="2020-11-26T08:45:41 BRT" name="finalizaTesteAtual" finished-at="2020-11-26T08:45:41 BRT" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void deliverymuchbrasil.com.automation_test.ValidateExtendNumberENUS.validateStatusCodeENUS(java.lang.String,java.lang.String)]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- finalizaTesteAtual -->
+        <test-method is-config="true" signature="resetRelatorioAntesDoMétodo()[pri:0, instance:deliverymuchbrasil.com.automation_test.ValidateExtendNumberENUS@479ceda0]" started-at="2020-11-26T08:45:41 BRT" name="resetRelatorioAntesDoMétodo" finished-at="2020-11-26T08:45:41 BRT" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- resetRelatorioAntesDoMétodo -->
+        <test-method signature="validateStatusCodeENUS(java.lang.String, java.lang.String)[pri:0, instance:deliverymuchbrasil.com.automation_test.ValidateExtendNumberENUS@479ceda0]" started-at="2020-11-26T08:45:41 BRT" name="validateStatusCodeENUS" description="Valida Código de Status da URL - en_US" data-provider="extensionData" finished-at="2020-11-26T08:45:41 BRT" duration-ms="478" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[-7]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[200]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateStatusCodeENUS -->
+        <test-method is-config="true" signature="finalizaTesteAtual(java.lang.reflect.Method)[pri:0, instance:deliverymuchbrasil.com.automation_test.ValidateExtendNumberENUS@479ceda0]" started-at="2020-11-26T08:45:41 BRT" name="finalizaTesteAtual" finished-at="2020-11-26T08:45:41 BRT" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void deliverymuchbrasil.com.automation_test.ValidateExtendNumberENUS.validateStatusCodeENUS(java.lang.String,java.lang.String)]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- finalizaTesteAtual -->
+        <test-method is-config="true" signature="resetRelatorioAntesDoMétodo()[pri:0, instance:deliverymuchbrasil.com.automation_test.ValidateExtendNumberENUS@479ceda0]" started-at="2020-11-26T08:45:41 BRT" name="resetRelatorioAntesDoMétodo" finished-at="2020-11-26T08:45:41 BRT" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- resetRelatorioAntesDoMétodo -->
+        <test-method signature="validateStatusCodeENUS(java.lang.String, java.lang.String)[pri:0, instance:deliverymuchbrasil.com.automation_test.ValidateExtendNumberENUS@479ceda0]" started-at="2020-11-26T08:45:41 BRT" name="validateStatusCodeENUS" description="Valida Código de Status da URL - en_US" data-provider="extensionData" finished-at="2020-11-26T08:45:42 BRT" duration-ms="478" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[-8]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[200]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateStatusCodeENUS -->
+        <test-method is-config="true" signature="finalizaTesteAtual(java.lang.reflect.Method)[pri:0, instance:deliverymuchbrasil.com.automation_test.ValidateExtendNumberENUS@479ceda0]" started-at="2020-11-26T08:45:42 BRT" name="finalizaTesteAtual" finished-at="2020-11-26T08:45:42 BRT" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void deliverymuchbrasil.com.automation_test.ValidateExtendNumberENUS.validateStatusCodeENUS(java.lang.String,java.lang.String)]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- finalizaTesteAtual -->
+      </class> <!-- deliverymuchbrasil.com.automation_test.ValidateExtendNumberENUS -->
+      <class name="deliverymuchbrasil.com.automation_test.ValidateExtendNumberPTBR">
+        <test-method is-config="true" signature="resetRelatorioAntesDoMétodo()[pri:0, instance:deliverymuchbrasil.com.automation_test.ValidateExtendNumberPTBR@6d07a63d]" started-at="2020-11-26T08:45:42 BRT" name="resetRelatorioAntesDoMétodo" finished-at="2020-11-26T08:45:42 BRT" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- resetRelatorioAntesDoMétodo -->
+        <test-method is-config="true" signature="resetRelatorioAntesDaClasse()[pri:0, instance:deliverymuchbrasil.com.automation_test.ValidateExtendNumberPTBR@6d07a63d]" started-at="2020-11-26T08:45:42 BRT" name="resetRelatorioAntesDaClasse" finished-at="2020-11-26T08:45:42 BRT" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- resetRelatorioAntesDaClasse -->
+        <test-method signature="validateInvalidNumberPTBR()[pri:0, instance:deliverymuchbrasil.com.automation_test.ValidateExtendNumberPTBR@6d07a63d]" started-at="2020-11-26T08:45:42 BRT" name="validateInvalidNumberPTBR" description="Valida Código Cenário Inválido" finished-at="2020-11-26T08:45:42 BRT" duration-ms="485" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateInvalidNumberPTBR -->
+        <test-method is-config="true" signature="finalizaTesteAtual(java.lang.reflect.Method)[pri:0, instance:deliverymuchbrasil.com.automation_test.ValidateExtendNumberPTBR@6d07a63d]" started-at="2020-11-26T08:45:42 BRT" name="finalizaTesteAtual" finished-at="2020-11-26T08:45:42 BRT" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void deliverymuchbrasil.com.automation_test.ValidateExtendNumberPTBR.validateInvalidNumberPTBR()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- finalizaTesteAtual -->
+        <test-method signature="validateNumberExtensionPTBR(java.lang.String, java.lang.String)[pri:0, instance:deliverymuchbrasil.com.automation_test.ValidateExtendNumberPTBR@6d07a63d]" started-at="2020-11-26T08:45:42 BRT" name="validateNumberExtensionPTBR" description="Valida extensão dos números URL - pt_BR" data-provider="extensionData" finished-at="2020-11-26T08:45:43 BRT" duration-ms="480" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[5]]>
               </value>
             </param>
             <param index="1">
@@ -35,7 +620,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- validateNumberExtensionPTBR -->
-        <test-method is-config="true" signature="finalizaTesteAtual(java.lang.reflect.Method)[pri:0, instance:deliverymuchbrasil.com.automation_test.ValidateExtendNumberPTBR@38ba6ce3]" started-at="2020-11-26T07:09:10 BRT" name="finalizaTesteAtual" finished-at="2020-11-26T07:09:10 BRT" duration-ms="13" status="PASS">
+        <test-method is-config="true" signature="resetRelatorioAntesDoMétodo()[pri:0, instance:deliverymuchbrasil.com.automation_test.ValidateExtendNumberPTBR@6d07a63d]" started-at="2020-11-26T08:45:42 BRT" name="resetRelatorioAntesDoMétodo" finished-at="2020-11-26T08:45:42 BRT" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- resetRelatorioAntesDoMétodo -->
+        <test-method is-config="true" signature="finalizaTesteAtual(java.lang.reflect.Method)[pri:0, instance:deliverymuchbrasil.com.automation_test.ValidateExtendNumberPTBR@6d07a63d]" started-at="2020-11-26T08:45:43 BRT" name="finalizaTesteAtual" finished-at="2020-11-26T08:45:43 BRT" duration-ms="1" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -46,15 +635,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- finalizaTesteAtual -->
-        <test-method is-config="true" signature="resetRelatorioAntesDoMétodo()[pri:0, instance:deliverymuchbrasil.com.automation_test.ValidateExtendNumberPTBR@38ba6ce3]" started-at="2020-11-26T07:09:10 BRT" name="resetRelatorioAntesDoMétodo" finished-at="2020-11-26T07:09:10 BRT" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="resetRelatorioAntesDoMétodo()[pri:0, instance:deliverymuchbrasil.com.automation_test.ValidateExtendNumberPTBR@6d07a63d]" started-at="2020-11-26T08:45:43 BRT" name="resetRelatorioAntesDoMétodo" finished-at="2020-11-26T08:45:43 BRT" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- resetRelatorioAntesDoMétodo -->
-        <test-method signature="validateNumberExtensionPTBR(java.lang.String, java.lang.String)[pri:0, instance:deliverymuchbrasil.com.automation_test.ValidateExtendNumberPTBR@38ba6ce3]" started-at="2020-11-26T07:09:10 BRT" name="validateNumberExtensionPTBR" description="Valida extensão dos números URL - pt_BR" data-provider="extensionData" finished-at="2020-11-26T07:09:10 BRT" duration-ms="518" status="PASS">
+        <test-method signature="validateNumberExtensionPTBR(java.lang.String, java.lang.String)[pri:0, instance:deliverymuchbrasil.com.automation_test.ValidateExtendNumberPTBR@6d07a63d]" started-at="2020-11-26T08:45:43 BRT" name="validateNumberExtensionPTBR" description="Valida extensão dos números URL - pt_BR" data-provider="extensionData" finished-at="2020-11-26T08:45:43 BRT" duration-ms="470" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[11]]>
+                <![CDATA[6]]>
               </value>
             </param>
             <param index="1">
@@ -66,7 +655,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- validateNumberExtensionPTBR -->
-        <test-method is-config="true" signature="finalizaTesteAtual(java.lang.reflect.Method)[pri:0, instance:deliverymuchbrasil.com.automation_test.ValidateExtendNumberPTBR@38ba6ce3]" started-at="2020-11-26T07:09:10 BRT" name="finalizaTesteAtual" finished-at="2020-11-26T07:09:10 BRT" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="finalizaTesteAtual(java.lang.reflect.Method)[pri:0, instance:deliverymuchbrasil.com.automation_test.ValidateExtendNumberPTBR@6d07a63d]" started-at="2020-11-26T08:45:43 BRT" name="finalizaTesteAtual" finished-at="2020-11-26T08:45:43 BRT" duration-ms="0" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -77,15 +666,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- finalizaTesteAtual -->
-        <test-method is-config="true" signature="resetRelatorioAntesDoMétodo()[pri:0, instance:deliverymuchbrasil.com.automation_test.ValidateExtendNumberPTBR@38ba6ce3]" started-at="2020-11-26T07:09:10 BRT" name="resetRelatorioAntesDoMétodo" finished-at="2020-11-26T07:09:10 BRT" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="resetRelatorioAntesDoMétodo()[pri:0, instance:deliverymuchbrasil.com.automation_test.ValidateExtendNumberPTBR@6d07a63d]" started-at="2020-11-26T08:45:43 BRT" name="resetRelatorioAntesDoMétodo" finished-at="2020-11-26T08:45:43 BRT" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- resetRelatorioAntesDoMétodo -->
-        <test-method signature="validateNumberExtensionPTBR(java.lang.String, java.lang.String)[pri:0, instance:deliverymuchbrasil.com.automation_test.ValidateExtendNumberPTBR@38ba6ce3]" started-at="2020-11-26T07:09:10 BRT" name="validateNumberExtensionPTBR" description="Valida extensão dos números URL - pt_BR" data-provider="extensionData" finished-at="2020-11-26T07:09:11 BRT" duration-ms="489" status="PASS">
+        <test-method signature="validateNumberExtensionPTBR(java.lang.String, java.lang.String)[pri:0, instance:deliverymuchbrasil.com.automation_test.ValidateExtendNumberPTBR@6d07a63d]" started-at="2020-11-26T08:45:43 BRT" name="validateNumberExtensionPTBR" description="Valida extensão dos números URL - pt_BR" data-provider="extensionData" finished-at="2020-11-26T08:45:44 BRT" duration-ms="483" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[12]]>
+                <![CDATA[7]]>
               </value>
             </param>
             <param index="1">
@@ -97,7 +686,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- validateNumberExtensionPTBR -->
-        <test-method is-config="true" signature="finalizaTesteAtual(java.lang.reflect.Method)[pri:0, instance:deliverymuchbrasil.com.automation_test.ValidateExtendNumberPTBR@38ba6ce3]" started-at="2020-11-26T07:09:11 BRT" name="finalizaTesteAtual" finished-at="2020-11-26T07:09:11 BRT" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="finalizaTesteAtual(java.lang.reflect.Method)[pri:0, instance:deliverymuchbrasil.com.automation_test.ValidateExtendNumberPTBR@6d07a63d]" started-at="2020-11-26T08:45:44 BRT" name="finalizaTesteAtual" finished-at="2020-11-26T08:45:44 BRT" duration-ms="1" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -108,15 +697,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- finalizaTesteAtual -->
-        <test-method is-config="true" signature="resetRelatorioAntesDoMétodo()[pri:0, instance:deliverymuchbrasil.com.automation_test.ValidateExtendNumberPTBR@38ba6ce3]" started-at="2020-11-26T07:09:11 BRT" name="resetRelatorioAntesDoMétodo" finished-at="2020-11-26T07:09:11 BRT" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="resetRelatorioAntesDoMétodo()[pri:0, instance:deliverymuchbrasil.com.automation_test.ValidateExtendNumberPTBR@6d07a63d]" started-at="2020-11-26T08:45:44 BRT" name="resetRelatorioAntesDoMétodo" finished-at="2020-11-26T08:45:44 BRT" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- resetRelatorioAntesDoMétodo -->
-        <test-method signature="validateNumberExtensionPTBR(java.lang.String, java.lang.String)[pri:0, instance:deliverymuchbrasil.com.automation_test.ValidateExtendNumberPTBR@38ba6ce3]" started-at="2020-11-26T07:09:11 BRT" name="validateNumberExtensionPTBR" description="Valida extensão dos números URL - pt_BR" data-provider="extensionData" finished-at="2020-11-26T07:09:11 BRT" duration-ms="490" status="PASS">
+        <test-method signature="validateNumberExtensionPTBR(java.lang.String, java.lang.String)[pri:0, instance:deliverymuchbrasil.com.automation_test.ValidateExtendNumberPTBR@6d07a63d]" started-at="2020-11-26T08:45:44 BRT" name="validateNumberExtensionPTBR" description="Valida extensão dos números URL - pt_BR" data-provider="extensionData" finished-at="2020-11-26T08:45:44 BRT" duration-ms="483" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[13]]>
+                <![CDATA[8]]>
               </value>
             </param>
             <param index="1">
@@ -128,7 +717,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- validateNumberExtensionPTBR -->
-        <test-method is-config="true" signature="finalizaTesteAtual(java.lang.reflect.Method)[pri:0, instance:deliverymuchbrasil.com.automation_test.ValidateExtendNumberPTBR@38ba6ce3]" started-at="2020-11-26T07:09:11 BRT" name="finalizaTesteAtual" finished-at="2020-11-26T07:09:11 BRT" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="finalizaTesteAtual(java.lang.reflect.Method)[pri:0, instance:deliverymuchbrasil.com.automation_test.ValidateExtendNumberPTBR@6d07a63d]" started-at="2020-11-26T08:45:44 BRT" name="finalizaTesteAtual" finished-at="2020-11-26T08:45:44 BRT" duration-ms="1" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -139,11 +728,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- finalizaTesteAtual -->
-        <test-method signature="validateNumberExtensionPTBR(java.lang.String, java.lang.String)[pri:0, instance:deliverymuchbrasil.com.automation_test.ValidateExtendNumberPTBR@38ba6ce3]" started-at="2020-11-26T07:09:11 BRT" name="validateNumberExtensionPTBR" description="Valida extensão dos números URL - pt_BR" data-provider="extensionData" finished-at="2020-11-26T07:09:12 BRT" duration-ms="494" status="PASS">
+        <test-method is-config="true" signature="resetRelatorioAntesDoMétodo()[pri:0, instance:deliverymuchbrasil.com.automation_test.ValidateExtendNumberPTBR@6d07a63d]" started-at="2020-11-26T08:45:44 BRT" name="resetRelatorioAntesDoMétodo" finished-at="2020-11-26T08:45:44 BRT" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- resetRelatorioAntesDoMétodo -->
+        <test-method signature="validateNumberExtensionPTBR(java.lang.String, java.lang.String)[pri:0, instance:deliverymuchbrasil.com.automation_test.ValidateExtendNumberPTBR@6d07a63d]" started-at="2020-11-26T08:45:44 BRT" name="validateNumberExtensionPTBR" description="Valida extensão dos números URL - pt_BR" data-provider="extensionData" finished-at="2020-11-26T08:45:44 BRT" duration-ms="476" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[-10]]>
+                <![CDATA[-5]]>
               </value>
             </param>
             <param index="1">
@@ -155,11 +748,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- validateNumberExtensionPTBR -->
-        <test-method is-config="true" signature="resetRelatorioAntesDoMétodo()[pri:0, instance:deliverymuchbrasil.com.automation_test.ValidateExtendNumberPTBR@38ba6ce3]" started-at="2020-11-26T07:09:11 BRT" name="resetRelatorioAntesDoMétodo" finished-at="2020-11-26T07:09:11 BRT" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- resetRelatorioAntesDoMétodo -->
-        <test-method is-config="true" signature="finalizaTesteAtual(java.lang.reflect.Method)[pri:0, instance:deliverymuchbrasil.com.automation_test.ValidateExtendNumberPTBR@38ba6ce3]" started-at="2020-11-26T07:09:12 BRT" name="finalizaTesteAtual" finished-at="2020-11-26T07:09:12 BRT" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="finalizaTesteAtual(java.lang.reflect.Method)[pri:0, instance:deliverymuchbrasil.com.automation_test.ValidateExtendNumberPTBR@6d07a63d]" started-at="2020-11-26T08:45:44 BRT" name="finalizaTesteAtual" finished-at="2020-11-26T08:45:44 BRT" duration-ms="1" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -170,15 +759,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- finalizaTesteAtual -->
-        <test-method is-config="true" signature="resetRelatorioAntesDoMétodo()[pri:0, instance:deliverymuchbrasil.com.automation_test.ValidateExtendNumberPTBR@38ba6ce3]" started-at="2020-11-26T07:09:12 BRT" name="resetRelatorioAntesDoMétodo" finished-at="2020-11-26T07:09:12 BRT" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="resetRelatorioAntesDoMétodo()[pri:0, instance:deliverymuchbrasil.com.automation_test.ValidateExtendNumberPTBR@6d07a63d]" started-at="2020-11-26T08:45:44 BRT" name="resetRelatorioAntesDoMétodo" finished-at="2020-11-26T08:45:44 BRT" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- resetRelatorioAntesDoMétodo -->
-        <test-method signature="validateNumberExtensionPTBR(java.lang.String, java.lang.String)[pri:0, instance:deliverymuchbrasil.com.automation_test.ValidateExtendNumberPTBR@38ba6ce3]" started-at="2020-11-26T07:09:12 BRT" name="validateNumberExtensionPTBR" description="Valida extensão dos números URL - pt_BR" data-provider="extensionData" finished-at="2020-11-26T07:09:12 BRT" duration-ms="492" status="PASS">
+        <test-method signature="validateNumberExtensionPTBR(java.lang.String, java.lang.String)[pri:0, instance:deliverymuchbrasil.com.automation_test.ValidateExtendNumberPTBR@6d07a63d]" started-at="2020-11-26T08:45:44 BRT" name="validateNumberExtensionPTBR" description="Valida extensão dos números URL - pt_BR" data-provider="extensionData" finished-at="2020-11-26T08:45:45 BRT" duration-ms="471" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[-11]]>
+                <![CDATA[-6]]>
               </value>
             </param>
             <param index="1">
@@ -190,7 +779,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- validateNumberExtensionPTBR -->
-        <test-method is-config="true" signature="finalizaTesteAtual(java.lang.reflect.Method)[pri:0, instance:deliverymuchbrasil.com.automation_test.ValidateExtendNumberPTBR@38ba6ce3]" started-at="2020-11-26T07:09:12 BRT" name="finalizaTesteAtual" finished-at="2020-11-26T07:09:12 BRT" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="finalizaTesteAtual(java.lang.reflect.Method)[pri:0, instance:deliverymuchbrasil.com.automation_test.ValidateExtendNumberPTBR@6d07a63d]" started-at="2020-11-26T08:45:45 BRT" name="finalizaTesteAtual" finished-at="2020-11-26T08:45:45 BRT" duration-ms="12" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -201,15 +790,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- finalizaTesteAtual -->
-        <test-method is-config="true" signature="resetRelatorioAntesDoMétodo()[pri:0, instance:deliverymuchbrasil.com.automation_test.ValidateExtendNumberPTBR@38ba6ce3]" started-at="2020-11-26T07:09:12 BRT" name="resetRelatorioAntesDoMétodo" finished-at="2020-11-26T07:09:12 BRT" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="resetRelatorioAntesDoMétodo()[pri:0, instance:deliverymuchbrasil.com.automation_test.ValidateExtendNumberPTBR@6d07a63d]" started-at="2020-11-26T08:45:45 BRT" name="resetRelatorioAntesDoMétodo" finished-at="2020-11-26T08:45:45 BRT" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- resetRelatorioAntesDoMétodo -->
-        <test-method signature="validateNumberExtensionPTBR(java.lang.String, java.lang.String)[pri:0, instance:deliverymuchbrasil.com.automation_test.ValidateExtendNumberPTBR@38ba6ce3]" started-at="2020-11-26T07:09:12 BRT" name="validateNumberExtensionPTBR" description="Valida extensão dos números URL - pt_BR" data-provider="extensionData" finished-at="2020-11-26T07:09:13 BRT" duration-ms="487" status="PASS">
+        <test-method signature="validateNumberExtensionPTBR(java.lang.String, java.lang.String)[pri:0, instance:deliverymuchbrasil.com.automation_test.ValidateExtendNumberPTBR@6d07a63d]" started-at="2020-11-26T08:45:45 BRT" name="validateNumberExtensionPTBR" description="Valida extensão dos números URL - pt_BR" data-provider="extensionData" finished-at="2020-11-26T08:45:45 BRT" duration-ms="470" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[-12]]>
+                <![CDATA[-7]]>
               </value>
             </param>
             <param index="1">
@@ -221,7 +810,23 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- validateNumberExtensionPTBR -->
-        <test-method is-config="true" signature="finalizaTesteAtual(java.lang.reflect.Method)[pri:0, instance:deliverymuchbrasil.com.automation_test.ValidateExtendNumberPTBR@38ba6ce3]" started-at="2020-11-26T07:09:13 BRT" name="finalizaTesteAtual" finished-at="2020-11-26T07:09:13 BRT" duration-ms="1" status="PASS">
+        <test-method signature="validateNumberExtensionPTBR(java.lang.String, java.lang.String)[pri:0, instance:deliverymuchbrasil.com.automation_test.ValidateExtendNumberPTBR@6d07a63d]" started-at="2020-11-26T08:45:45 BRT" name="validateNumberExtensionPTBR" description="Valida extensão dos números URL - pt_BR" data-provider="extensionData" finished-at="2020-11-26T08:45:46 BRT" duration-ms="492" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[-8]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[200]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateNumberExtensionPTBR -->
+        <test-method is-config="true" signature="finalizaTesteAtual(java.lang.reflect.Method)[pri:0, instance:deliverymuchbrasil.com.automation_test.ValidateExtendNumberPTBR@6d07a63d]" started-at="2020-11-26T08:45:45 BRT" name="finalizaTesteAtual" finished-at="2020-11-26T08:45:45 BRT" duration-ms="0" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -232,15 +837,30 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- finalizaTesteAtual -->
-        <test-method is-config="true" signature="resetRelatorioAntesDoMétodo()[pri:0, instance:deliverymuchbrasil.com.automation_test.ValidateExtendNumberPTBR@38ba6ce3]" started-at="2020-11-26T07:09:13 BRT" name="resetRelatorioAntesDoMétodo" finished-at="2020-11-26T07:09:13 BRT" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="resetRelatorioAntesDoMétodo()[pri:0, instance:deliverymuchbrasil.com.automation_test.ValidateExtendNumberPTBR@6d07a63d]" started-at="2020-11-26T08:45:45 BRT" name="resetRelatorioAntesDoMétodo" finished-at="2020-11-26T08:45:45 BRT" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- resetRelatorioAntesDoMétodo -->
-        <test-method signature="validateNumberExtensionPTBR(java.lang.String, java.lang.String)[pri:0, instance:deliverymuchbrasil.com.automation_test.ValidateExtendNumberPTBR@38ba6ce3]" started-at="2020-11-26T07:09:13 BRT" name="validateNumberExtensionPTBR" description="Valida extensão dos números URL - pt_BR" data-provider="extensionData" finished-at="2020-11-26T07:09:13 BRT" duration-ms="481" status="PASS">
+        <test-method is-config="true" signature="finalizaTesteAtual(java.lang.reflect.Method)[pri:0, instance:deliverymuchbrasil.com.automation_test.ValidateExtendNumberPTBR@6d07a63d]" started-at="2020-11-26T08:45:46 BRT" name="finalizaTesteAtual" finished-at="2020-11-26T08:45:46 BRT" duration-ms="0" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[-13]]>
+                <![CDATA[public void deliverymuchbrasil.com.automation_test.ValidateExtendNumberPTBR.validateNumberExtensionPTBR(java.lang.String,java.lang.String)]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- finalizaTesteAtual -->
+        <test-method is-config="true" signature="resetRelatorioAntesDoMétodo()[pri:0, instance:deliverymuchbrasil.com.automation_test.ValidateExtendNumberPTBR@6d07a63d]" started-at="2020-11-26T08:45:46 BRT" name="resetRelatorioAntesDoMétodo" finished-at="2020-11-26T08:45:46 BRT" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- resetRelatorioAntesDoMétodo -->
+        <test-method signature="validateStatusCodePTBR(java.lang.String, java.lang.String)[pri:0, instance:deliverymuchbrasil.com.automation_test.ValidateExtendNumberPTBR@6d07a63d]" started-at="2020-11-26T08:45:46 BRT" name="validateStatusCodePTBR" description="Valida Código de Status da URL - pt_BR" data-provider="extensionData" finished-at="2020-11-26T08:45:46 BRT" duration-ms="477" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[5]]>
               </value>
             </param>
             <param index="1">
@@ -251,12 +871,229 @@
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- validateNumberExtensionPTBR -->
-        <test-method is-config="true" signature="finalizaTesteAtual(java.lang.reflect.Method)[pri:0, instance:deliverymuchbrasil.com.automation_test.ValidateExtendNumberPTBR@38ba6ce3]" started-at="2020-11-26T07:09:13 BRT" name="finalizaTesteAtual" finished-at="2020-11-26T07:09:13 BRT" duration-ms="2" status="PASS">
+        </test-method> <!-- validateStatusCodePTBR -->
+        <test-method is-config="true" signature="finalizaTesteAtual(java.lang.reflect.Method)[pri:0, instance:deliverymuchbrasil.com.automation_test.ValidateExtendNumberPTBR@6d07a63d]" started-at="2020-11-26T08:45:46 BRT" name="finalizaTesteAtual" finished-at="2020-11-26T08:45:46 BRT" duration-ms="0" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void deliverymuchbrasil.com.automation_test.ValidateExtendNumberPTBR.validateNumberExtensionPTBR(java.lang.String,java.lang.String)]]>
+                <![CDATA[public void deliverymuchbrasil.com.automation_test.ValidateExtendNumberPTBR.validateStatusCodePTBR(java.lang.String,java.lang.String)]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- finalizaTesteAtual -->
+        <test-method signature="validateStatusCodePTBR(java.lang.String, java.lang.String)[pri:0, instance:deliverymuchbrasil.com.automation_test.ValidateExtendNumberPTBR@6d07a63d]" started-at="2020-11-26T08:45:46 BRT" name="validateStatusCodePTBR" description="Valida Código de Status da URL - pt_BR" data-provider="extensionData" finished-at="2020-11-26T08:45:47 BRT" duration-ms="468" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[6]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[200]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateStatusCodePTBR -->
+        <test-method is-config="true" signature="resetRelatorioAntesDoMétodo()[pri:0, instance:deliverymuchbrasil.com.automation_test.ValidateExtendNumberPTBR@6d07a63d]" started-at="2020-11-26T08:45:46 BRT" name="resetRelatorioAntesDoMétodo" finished-at="2020-11-26T08:45:46 BRT" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- resetRelatorioAntesDoMétodo -->
+        <test-method is-config="true" signature="finalizaTesteAtual(java.lang.reflect.Method)[pri:0, instance:deliverymuchbrasil.com.automation_test.ValidateExtendNumberPTBR@6d07a63d]" started-at="2020-11-26T08:45:47 BRT" name="finalizaTesteAtual" finished-at="2020-11-26T08:45:47 BRT" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void deliverymuchbrasil.com.automation_test.ValidateExtendNumberPTBR.validateStatusCodePTBR(java.lang.String,java.lang.String)]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- finalizaTesteAtual -->
+        <test-method signature="validateStatusCodePTBR(java.lang.String, java.lang.String)[pri:0, instance:deliverymuchbrasil.com.automation_test.ValidateExtendNumberPTBR@6d07a63d]" started-at="2020-11-26T08:45:47 BRT" name="validateStatusCodePTBR" description="Valida Código de Status da URL - pt_BR" data-provider="extensionData" finished-at="2020-11-26T08:45:47 BRT" duration-ms="478" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[7]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[200]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateStatusCodePTBR -->
+        <test-method is-config="true" signature="resetRelatorioAntesDoMétodo()[pri:0, instance:deliverymuchbrasil.com.automation_test.ValidateExtendNumberPTBR@6d07a63d]" started-at="2020-11-26T08:45:47 BRT" name="resetRelatorioAntesDoMétodo" finished-at="2020-11-26T08:45:47 BRT" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- resetRelatorioAntesDoMétodo -->
+        <test-method is-config="true" signature="finalizaTesteAtual(java.lang.reflect.Method)[pri:0, instance:deliverymuchbrasil.com.automation_test.ValidateExtendNumberPTBR@6d07a63d]" started-at="2020-11-26T08:45:47 BRT" name="finalizaTesteAtual" finished-at="2020-11-26T08:45:47 BRT" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void deliverymuchbrasil.com.automation_test.ValidateExtendNumberPTBR.validateStatusCodePTBR(java.lang.String,java.lang.String)]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- finalizaTesteAtual -->
+        <test-method is-config="true" signature="resetRelatorioAntesDoMétodo()[pri:0, instance:deliverymuchbrasil.com.automation_test.ValidateExtendNumberPTBR@6d07a63d]" started-at="2020-11-26T08:45:47 BRT" name="resetRelatorioAntesDoMétodo" finished-at="2020-11-26T08:45:47 BRT" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- resetRelatorioAntesDoMétodo -->
+        <test-method signature="validateStatusCodePTBR(java.lang.String, java.lang.String)[pri:0, instance:deliverymuchbrasil.com.automation_test.ValidateExtendNumberPTBR@6d07a63d]" started-at="2020-11-26T08:45:47 BRT" name="validateStatusCodePTBR" description="Valida Código de Status da URL - pt_BR" data-provider="extensionData" finished-at="2020-11-26T08:45:48 BRT" duration-ms="485" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[8]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[200]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateStatusCodePTBR -->
+        <test-method is-config="true" signature="finalizaTesteAtual(java.lang.reflect.Method)[pri:0, instance:deliverymuchbrasil.com.automation_test.ValidateExtendNumberPTBR@6d07a63d]" started-at="2020-11-26T08:45:48 BRT" name="finalizaTesteAtual" finished-at="2020-11-26T08:45:48 BRT" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void deliverymuchbrasil.com.automation_test.ValidateExtendNumberPTBR.validateStatusCodePTBR(java.lang.String,java.lang.String)]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- finalizaTesteAtual -->
+        <test-method is-config="true" signature="resetRelatorioAntesDoMétodo()[pri:0, instance:deliverymuchbrasil.com.automation_test.ValidateExtendNumberPTBR@6d07a63d]" started-at="2020-11-26T08:45:48 BRT" name="resetRelatorioAntesDoMétodo" finished-at="2020-11-26T08:45:48 BRT" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- resetRelatorioAntesDoMétodo -->
+        <test-method signature="validateStatusCodePTBR(java.lang.String, java.lang.String)[pri:0, instance:deliverymuchbrasil.com.automation_test.ValidateExtendNumberPTBR@6d07a63d]" started-at="2020-11-26T08:45:48 BRT" name="validateStatusCodePTBR" description="Valida Código de Status da URL - pt_BR" data-provider="extensionData" finished-at="2020-11-26T08:45:48 BRT" duration-ms="514" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[-5]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[200]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateStatusCodePTBR -->
+        <test-method is-config="true" signature="finalizaTesteAtual(java.lang.reflect.Method)[pri:0, instance:deliverymuchbrasil.com.automation_test.ValidateExtendNumberPTBR@6d07a63d]" started-at="2020-11-26T08:45:48 BRT" name="finalizaTesteAtual" finished-at="2020-11-26T08:45:48 BRT" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void deliverymuchbrasil.com.automation_test.ValidateExtendNumberPTBR.validateStatusCodePTBR(java.lang.String,java.lang.String)]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- finalizaTesteAtual -->
+        <test-method is-config="true" signature="resetRelatorioAntesDoMétodo()[pri:0, instance:deliverymuchbrasil.com.automation_test.ValidateExtendNumberPTBR@6d07a63d]" started-at="2020-11-26T08:45:48 BRT" name="resetRelatorioAntesDoMétodo" finished-at="2020-11-26T08:45:48 BRT" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- resetRelatorioAntesDoMétodo -->
+        <test-method signature="validateStatusCodePTBR(java.lang.String, java.lang.String)[pri:0, instance:deliverymuchbrasil.com.automation_test.ValidateExtendNumberPTBR@6d07a63d]" started-at="2020-11-26T08:45:48 BRT" name="validateStatusCodePTBR" description="Valida Código de Status da URL - pt_BR" data-provider="extensionData" finished-at="2020-11-26T08:45:49 BRT" duration-ms="483" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[-6]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[200]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateStatusCodePTBR -->
+        <test-method is-config="true" signature="finalizaTesteAtual(java.lang.reflect.Method)[pri:0, instance:deliverymuchbrasil.com.automation_test.ValidateExtendNumberPTBR@6d07a63d]" started-at="2020-11-26T08:45:49 BRT" name="finalizaTesteAtual" finished-at="2020-11-26T08:45:49 BRT" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void deliverymuchbrasil.com.automation_test.ValidateExtendNumberPTBR.validateStatusCodePTBR(java.lang.String,java.lang.String)]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- finalizaTesteAtual -->
+        <test-method is-config="true" signature="resetRelatorioAntesDoMétodo()[pri:0, instance:deliverymuchbrasil.com.automation_test.ValidateExtendNumberPTBR@6d07a63d]" started-at="2020-11-26T08:45:49 BRT" name="resetRelatorioAntesDoMétodo" finished-at="2020-11-26T08:45:49 BRT" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- resetRelatorioAntesDoMétodo -->
+        <test-method signature="validateStatusCodePTBR(java.lang.String, java.lang.String)[pri:0, instance:deliverymuchbrasil.com.automation_test.ValidateExtendNumberPTBR@6d07a63d]" started-at="2020-11-26T08:45:49 BRT" name="validateStatusCodePTBR" description="Valida Código de Status da URL - pt_BR" data-provider="extensionData" finished-at="2020-11-26T08:45:49 BRT" duration-ms="482" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[-7]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[200]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateStatusCodePTBR -->
+        <test-method is-config="true" signature="finalizaTesteAtual(java.lang.reflect.Method)[pri:0, instance:deliverymuchbrasil.com.automation_test.ValidateExtendNumberPTBR@6d07a63d]" started-at="2020-11-26T08:45:49 BRT" name="finalizaTesteAtual" finished-at="2020-11-26T08:45:49 BRT" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void deliverymuchbrasil.com.automation_test.ValidateExtendNumberPTBR.validateStatusCodePTBR(java.lang.String,java.lang.String)]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- finalizaTesteAtual -->
+        <test-method signature="validateStatusCodePTBR(java.lang.String, java.lang.String)[pri:0, instance:deliverymuchbrasil.com.automation_test.ValidateExtendNumberPTBR@6d07a63d]" started-at="2020-11-26T08:45:49 BRT" name="validateStatusCodePTBR" description="Valida Código de Status da URL - pt_BR" data-provider="extensionData" finished-at="2020-11-26T08:45:50 BRT" duration-ms="470" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[-8]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[200]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateStatusCodePTBR -->
+        <test-method is-config="true" signature="resetRelatorioAntesDoMétodo()[pri:0, instance:deliverymuchbrasil.com.automation_test.ValidateExtendNumberPTBR@6d07a63d]" started-at="2020-11-26T08:45:49 BRT" name="resetRelatorioAntesDoMétodo" finished-at="2020-11-26T08:45:49 BRT" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- resetRelatorioAntesDoMétodo -->
+        <test-method is-config="true" signature="finalizaTesteAtual(java.lang.reflect.Method)[pri:0, instance:deliverymuchbrasil.com.automation_test.ValidateExtendNumberPTBR@6d07a63d]" started-at="2020-11-26T08:45:50 BRT" name="finalizaTesteAtual" finished-at="2020-11-26T08:45:50 BRT" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void deliverymuchbrasil.com.automation_test.ValidateExtendNumberPTBR.validateStatusCodePTBR(java.lang.String,java.lang.String)]]>
               </value>
             </param>
           </params>

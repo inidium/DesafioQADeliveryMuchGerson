@@ -186,7 +186,7 @@ Depois de instalado o `newman` e o `newman-reporter-aullure`, basta editar os ar
 Basicamente cada .bat tem uma linha de comando para chamar um teste, por exemplo, temos a pasta `3-DataDrivenTests` e dentro dela o .bat `2 - Execute DataDriven Tests [en_US]`, ao abrir, vamos no deparar com o comando:
 
 ```
-newman run "D:\Projetos\Postman\desafio de QA da Delivery Much!.postman_collection.json" -d "D:\Projetos\Postman\Resources\NumbersData[en_US].json" --folder DataDriven[en_US] newman run "D:\Projetos\Postman\desafio de QA da Delivery Much!.postman_collection.json" --folder DataDriven[en_US] -r allure --reporter-allure-export "D:\Projetos\Postman\Executors\1-Reports"
+newman run "D:\Projetos\Postman\desafio de QA da Delivery Much!.postman_collection.json" -d "D:\Projetos\Postman\Resources\NumbersData[en_US].json" --folder DataDriven[en_US] -r allure --reporter-allure-export "D:\Projetos\Postman\Executors\1-Reports"
 ```
 
 Nota-se que o comando está com os diretórios da minha máquina, então ao tentar rodar obviamente um erro irá acontecer. Então basicamente troque os caminhos para o caminhos da sua máquina antes de executar o .bat. 

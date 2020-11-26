@@ -3,15 +3,15 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="deliverymuchbrasil.com.automation_test.ValidateExtendNumberPTBR">
+      <class name="deliverymuchbrasil.com.automation_test.ValidateExtendNumberENUS">
         <methods>
+          <include name="validateInvalidNumberENUS"/>
           <include name="resetRelatorioAntesDaClasse"/>
           <include name="initialEngine"/>
-          <include name="validateNumberExtensionPTBR"/>
           <include name="resetRelatorioAntesDoMétodo"/>
           <include name="finalizaTesteAtual"/>
         </methods>
-      </class> <!-- deliverymuchbrasil.com.automation_test.ValidateExtendNumberPTBR -->
+      </class> <!-- deliverymuchbrasil.com.automation_test.ValidateExtendNumberENUS -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

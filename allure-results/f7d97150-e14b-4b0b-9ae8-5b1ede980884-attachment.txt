@@ -1,0 +1,11 @@
+
+
+------------------------------------------------------------
+Classe de Teste: validateStatusCodePTBR
+
+
+---> Body a enviar: 
+
+--->Resposta da chamada: {"extenso": "menos sete"}
+
+--->Verificando se o status retornado: 200 |É igual a: 200 |
