@@ -1,0 +1,492 @@
+{
+	"info": {
+		"_postman_id": "24b3b1eb-3c0c-4f65-ba7a-8f2129962598",
+		"name": "desafio de QA da Delivery Much!",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "pt_BR",
+			"item": [
+				{
+					"name": "DataDriven[pt_BR]",
+					"item": [
+						{
+							"name": "dataDrivenTest",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "b2b155cb-2dfa-441b-a49d-53dae4aa304e",
+										"exec": [
+											"pm.test(\"Validate status code\", function () {\r",
+											"    pm.response.to.have.status(pm.variables.get(\"statusCodeExpected\"));\r",
+											"});\r",
+											"pm.test(\"Validate number extension\", function () {\r",
+											"    const utils = eval(globals.loadUtils);\r",
+											"    const textNumber = pm.variables.get(\"numberFullExpected\");\r",
+											"    const responseJson = pm.response.json();\r",
+											"    pm.expect(responseJson.extenso).to.eql(textNumber);\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://challengeqa.staging.devmuch.io/{{number}}",
+									"protocol": "http",
+									"host": [
+										"challengeqa",
+										"staging",
+										"devmuch",
+										"io"
+									],
+									"path": [
+										"{{number}}"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "AleatoryNumber[pt_BR]",
+					"item": [
+						{
+							"name": "aleatoryNumberTest",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"id": "e280b7c4-bdbd-48cf-9585-8df0afae3c28",
+										"exec": [
+											"pm.globals.set(\"aleatoryNumber\", _.random(-10000, 10000));"
+										],
+										"type": "text/javascript"
+									}
+								},
+								{
+									"listen": "test",
+									"script": {
+										"id": "f5b40893-97b1-4b9f-a93e-cbaaa080ab7e",
+										"exec": [
+											"pm.test(\"Status code is 200\", function () {\r",
+											"    pm.response.to.have.status(200);\r",
+											"});\r",
+											"pm.test(\"Body matches string\", function () {\r",
+											"    const utils = eval(globals.loadUtils);\r",
+											"    const textNumber = utils.reuseableFunction(pm.variables.get(\"aleatoryNumber\"));\r",
+											"    const responseJson = pm.response.json();\r",
+											"    pm.expect(responseJson.extenso).to.eql(textNumber);\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://challengeqa.staging.devmuch.io/{{aleatoryNumber}}",
+									"protocol": "http",
+									"host": [
+										"challengeqa",
+										"staging",
+										"devmuch",
+										"io"
+									],
+									"path": [
+										"{{aleatoryNumber}}"
+									]
+								},
+								"description": "Será gerado um numero aleatório entre -10000 e 10000, validando o status code e a extensão retornada.\r\n\r\nFunção para converter números adaptadas:\r\n\r\nhttps://pt.stackoverflow.com/questions/5945/como-transformar-d%C3%ADgitos-num%C3%A9ricos-em-n%C3%BAmeros-por-extenso\r\n\r\nhttps://stackoverflow.com/questions/14766951/convert-digits-into-words-with-javascript\r\n\r\nhttps://jsfiddle.net/lesson8/5tt7d3e6/"
+							},
+							"response": []
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "en_US",
+			"item": [
+				{
+					"name": "DataDriven[en_US]",
+					"item": [
+						{
+							"name": "dataDrivenTest",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "b2661905-8f6d-4ce8-beae-4d200e3a8f07",
+										"exec": [
+											"pm.test(\"Validate status code\", function () {\r",
+											"    pm.response.to.have.status(pm.variables.get(\"statusCodeExpected\"));\r",
+											"});\r",
+											"pm.test(\"Validate number extension\", function () {\r",
+											"    const utils = eval(globals.loadUtils);\r",
+											"    const textNumber = pm.variables.get(\"numberFullExpected\");\r",
+											"    const responseJson = pm.response.json();\r",
+											"    pm.expect(responseJson.full).to.eql(textNumber);\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://challengeqa.staging.devmuch.io/en/{{number}}",
+									"protocol": "http",
+									"host": [
+										"challengeqa",
+										"staging",
+										"devmuch",
+										"io"
+									],
+									"path": [
+										"en",
+										"{{number}}"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "AleatoryNumber[en_US]",
+					"item": [
+						{
+							"name": "aleatoryNumberTest",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"id": "5199d4ed-88fc-49b9-8a22-8eb9d57f99cf",
+										"exec": [
+											"pm.globals.set(\"aleatoryNumber\", _.random(-10000, 10000));"
+										],
+										"type": "text/javascript"
+									}
+								},
+								{
+									"listen": "test",
+									"script": {
+										"id": "8c5efc18-8bfe-4386-852f-311679c27efb",
+										"exec": [
+											"pm.test(\"Status code is 200\", function () {\r",
+											"    pm.response.to.have.status(200);\r",
+											"});\r",
+											"pm.test(\"Body matches string\", function () {\r",
+											"    const utils = eval(globals.loadUtilsENUS);\r",
+											"    const textNumber = utils.reuseableFunction(pm.variables.get(\"aleatoryNumber\"));\r",
+											"    const responseJson = pm.response.json();\r",
+											"    pm.expect(responseJson.full).to.equals(textNumber);\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://challengeqa.staging.devmuch.io/en/{{aleatoryNumber}}",
+									"protocol": "http",
+									"host": [
+										"challengeqa",
+										"staging",
+										"devmuch",
+										"io"
+									],
+									"path": [
+										"en",
+										"{{aleatoryNumber}}"
+									]
+								},
+								"description": "Será gerado um numero aleatório entre -10000 e 10000, validando o status code e a extensão retornada.\r\n\r\nFunção para converter números adaptadas:\r\n\r\nhttps://pt.stackoverflow.com/questions/5945/como-transformar-d%C3%ADgitos-num%C3%A9ricos-em-n%C3%BAmeros-por-extenso\r\n\r\nhttps://stackoverflow.com/questions/14766951/convert-digits-into-words-with-javascript\r\n\r\nhttps://jsfiddle.net/lesson8/5tt7d3e6/"
+							},
+							"response": []
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "8a56bedc-18a9-41c9-be31-ec35198d7310",
+				"type": "text/javascript",
+				"exec": [
+					"pm.globals.set(\"loadUtils\", function loadUtils(){",
+					"    let utils = {};",
+					"    utils.reuseableFunction = function Extenso(vlr){",
+					"        var Num=parseFloat(vlr);",
+					"        if (vlr == 0){",
+					"            return \"zero\";",
+					"        }else{",
+					"        var inteiro = parseInt(vlr);; // parte inteira do valor",
+					"        if(inteiro<1000000000000000){",
+					"            var resto = Num.toFixed(2) - inteiro.toFixed(2);       // parte fracionária do valor",
+					"            resto=resto.toFixed(2)",
+					"            var vlrS =  inteiro.toString();    ",
+					"            var cont=vlrS.length;",
+					"            var extenso=\"\";",
+					"            var auxnumero;",
+					"            var auxnumero2;",
+					"            var auxnumero3;",
+					"            var unidade =[\"\", \"um\", \"dois\", \"três\", \"quatro\", \"cinco\",",
+					"            \"seis\", \"sete\", \"oito\", \"nove\", \"dez\", \"onze\",",
+					"            \"doze\", \"treze\", \"quatorze\", \"quinze\", \"dezesseis\",",
+					"            \"dezessete\", \"dezoito\", \"dezenove\"];",
+					"            var centena = [\"\", \"cento\", \"duzentos\", \"trezentos\",",
+					"                \"quatrocentos\", \"quinhentos\", \"seiscentos\",",
+					"                \"setecentos\", \"oitocentos\", \"novecentos\"];",
+					"            var dezena = [\"\", \"\", \"vinte\", \"trinta\", \"quarenta\", \"cinquenta\",",
+					"                \"sessenta\", \"setenta\", \"oitenta\", \"noventa\"];",
+					"            var qualificaS = [\"reais\", \"mil\", \"milhão\", \"bilhão\", \"trilhão\"];",
+					"            var qualificaP = [\"reais\", \"mil\", \"milhões\", \"bilhões\", \"trilhões\"];",
+					"            for (var i=cont;i > 0;i--){   ",
+					"                var verifica1=\"\";",
+					"                var verifica2=0;",
+					"                var verifica3=0;",
+					"                auxnumero2=\"\";",
+					"                auxnumero3=\"\";",
+					"                auxnumero=0;",
+					"                auxnumero2 = vlrS.substr(cont-i,1);    ",
+					"                auxnumero = parseInt(auxnumero2);",
+					"                if((i==14)||(i==11)||(i==8)||(i==5)||(i==2)){",
+					"                    auxnumero2 = vlrS.substr(cont-i,2);",
+					"                    auxnumero = parseInt(auxnumero2);",
+					"                }",
+					"                if((i==15)||(i==12)||(i==9)||(i==6)||(i==3)){",
+					"                    extenso=extenso+centena[auxnumero];",
+					"                    auxnumero2 = vlrS.substr(cont-i+1,1)",
+					"                    auxnumero3 = vlrS.substr(cont-i+2,1)",
+					"                    if((auxnumero2!=\"0\")||(auxnumero3!=\"0\"))",
+					"                        extenso+=\" e \";",
+					"                }else if(auxnumero>19){",
+					"                    auxnumero2 = vlrS.substr(cont-i,1);",
+					"                    auxnumero = parseInt(auxnumero2);",
+					"                    extenso=extenso+dezena[auxnumero];",
+					"                    auxnumero3 = vlrS.substr(cont-i+1,1)",
+					"                    if((auxnumero3!=\"0\")&&(auxnumero2!=\"1\"))",
+					"                        extenso+=\" e \";",
+					"                }else if((auxnumero<=19)&&(auxnumero>9)&&((i==14)||(i==11)||(i==8)||(i==5)||(i==2))){",
+					"                    extenso=extenso+unidade[auxnumero];   ",
+					"                }else if((auxnumero<10)&&((i==13)||(i==10)||(i==7)||(i==4)||(i==1))){",
+					"                    auxnumero3 = vlrS.substr(cont-i-1,1);",
+					"                    if((auxnumero3!=\"1\")&&(auxnumero3!=\"\"))",
+					"                        extenso=extenso+unidade[auxnumero]; ",
+					"                }",
+					"                if(i%3==1){       ",
+					"                    verifica3 = cont-i;",
+					"                    if(verifica3==0)",
+					"                    verifica1 = vlrS.substr(cont-i,1);",
+					"                    if(verifica3==1)",
+					"                    verifica1 = vlrS.substr(cont-i-1,2);",
+					"                    if(verifica3>1)",
+					"                    verifica1 = vlrS.substr(cont-i-2,3);",
+					"                    verifica2 = parseInt(verifica1);",
+					"                    if(i==13){",
+					"                        if(verifica2==1){",
+					"                            extenso=extenso+\" \"+qualificaS[4]+\" \";",
+					"                        }else if(verifica2!=0){",
+					"                            extenso=extenso+\" \"+qualificaP[4]+\" \";",
+					"                        }",
+					"                    }",
+					"                    if(i==10){",
+					"                        if(verifica2==1){",
+					"                            extenso=extenso+\" \"+qualificaS[3]+\" \";",
+					"                        }else if(verifica2!=0){",
+					"                            extenso=extenso+\" \"+qualificaP[3]+\" \";",
+					"                        }",
+					"                    }",
+					"                    if(i==7){",
+					"                        if(verifica2==1){",
+					"                            extenso=extenso+\" \"+qualificaS[2]+\" \";",
+					"                        }else if(verifica2!=0){",
+					"                            extenso=extenso+\" \"+qualificaP[2]+\" \";",
+					"                        }",
+					"                    }",
+					"                    if(i==4){",
+					"                        if(verifica2==1){",
+					"                            extenso=extenso+\" \"+qualificaS[1]+\" \";",
+					"                        }else if(verifica2!=0){",
+					"                            extenso=extenso+\" \"+qualificaP[1]+\" \";",
+					"                        }",
+					"                    }",
+					"                    if(i==1){",
+					"                        if(verifica2==1){",
+					"                            extenso=extenso;",
+					"                        } else {",
+					"                            extenso=extenso;",
+					"                        }",
+					"                    }",
+					"                }",
+					"            }",
+					"            resto = resto * 100;",
+					"            var aexCent=0;",
+					"            if(resto<=19&&resto>0)",
+					"            extenso+=\" e \"+unidade[resto];",
+					"            if(resto>19) {",
+					"                aexCent=parseInt(resto/10);",
+					"                extenso+=\" e \"+dezena[aexCent]",
+					"                resto=resto-(aexCent*10);",
+					"                if(resto!=0)",
+					"                extenso+=\" e \"+unidade[resto];",
+					"            }",
+					"            let teste = \"menos \";",
+					"            if (vlr < 0)",
+					"                return teste += extenso;",
+					"            return extenso;",
+					"        } else {",
+					"            return  \"Numero maior que 999 trilhões\";",
+					"        }",
+					"        }",
+					"    }",
+					"    return utils;",
+					"} + '; loadUtils();');",
+					"pm.globals.set(\"loadUtilsENUS\", function loadUtilsENUS(){",
+					"    let utils = {};",
+					"    utils.reuseableFunction = function convertNumberToWord(num){",
+					"        var extension = \"\";",
+					"\t\tif (num < 0){",
+					"\t\t\tnum = num * (-1);",
+					"\t\t\textension = \"minus \";",
+					"\t\t}",
+					"        var words = new Array();",
+					"        words[0] = '';",
+					"        words[1] = 'one';",
+					"        words[2] = 'two';",
+					"        words[3] = 'three';",
+					"        words[4] = 'four';",
+					"        words[5] = 'five';",
+					"        words[6] = 'six';",
+					"        words[7] = 'seven';",
+					"        words[8] = 'eight';",
+					"        words[9] = 'nine';",
+					"        words[10] = 'ten';",
+					"        words[11] = 'eleven';",
+					"        words[12] = 'twelve';",
+					"        words[13] = 'thirteen';",
+					"        words[14] = 'fourteen';",
+					"        words[15] = 'fifteen';",
+					"        words[16] = 'sixteen';",
+					"        words[17] = 'seventeen';",
+					"        words[18] = 'eighteen';",
+					"        words[19] = 'nineteen';",
+					"        words[20] = 'twenty';",
+					"        words[30] = 'thirty';",
+					"        words[40] = 'forty';",
+					"        words[50] = 'fifty';",
+					"        words[60] = 'sixty';",
+					"        words[70] = 'seventy';",
+					"        words[80] = 'eighty';",
+					"        words[90] = 'ninety';",
+					"        num = num.toString();",
+					"        var atemp = num.split(\".\");",
+					"        var number = atemp[0].split(\",\").join(\"\");",
+					"        var n_length = number.length;",
+					"        var words_string = \"\";",
+					"        if (n_length <= 9) {",
+					"            var n_array = new Array(0, 0, 0, 0, 0, 0, 0, 0, 0);",
+					"            var received_n_array = new Array();",
+					"            for (var i = 0; i < n_length; i++) {",
+					"                received_n_array[i] = number.substr(i, 1);",
+					"            }",
+					"            for (var i = 9 - n_length, j = 0; i < 9; i++, j++) {",
+					"                n_array[i] = received_n_array[j];",
+					"            }",
+					"            for (var i = 0, j = 1; i < 9; i++, j++) {",
+					"                if (i == 0 || i == 2 || i == 4 || i == 7) {",
+					"                    if (n_array[i] == 1) {",
+					"                        n_array[j] = 10 + parseInt(n_array[j]);",
+					"                        n_array[i] = 0;",
+					"                    }",
+					"                }",
+					"            }",
+					"            value = \"\";",
+					"            var Thousand = false;",
+					"            var Hundred = false;",
+					"            for (var i = 0; i < 9; i++) {",
+					"                if (i == 0 || i == 2 || i == 4 || i == 7) {",
+					"                    value = n_array[i] * 10;",
+					"                } else {",
+					"                    value = n_array[i];",
+					"                }",
+					"                if (value != 0) {",
+					"                    if (words_string.includes(\"thousand\") && !Thousand){",
+					"                        words_string += \", \" + words[value] + \" \";",
+					"                        Thousand = true;",
+					"                    } else if (words_string.includes(\"hundred\") && !Hundred && n_array[i+1] == null){",
+					"                        var final = words_string.slice(0, -1);",
+					"                        if (final != \"undefined\")",
+					"                            words_string = words_string.slice(0, -1) + \"-\" + words[value];",
+					"                        Hundred = false;",
+					"                    }else{",
+					"                        words_string += words[value] + \" \";",
+					"                    }",
+					"                }",
+					"                if ((i == 1 && value != 0) || (i == 0 && value != 0 && n_array[i + 1] == 0)) {",
+					"                    words_string += \"crores \";",
+					"                }",
+					"                if ((i == 3 && value != 0) || (i == 2 && value != 0 && n_array[i + 1] == 0)) {",
+					"                    words_string += \"lakhs \";",
+					"                }",
+					"                if ((i == 5 && value != 0) || (i == 4 && value != 0 && n_array[i + 1] == 0)) {",
+					"                    words_string += \"thousand\";",
+					"                }",
+					"                if (i == 6 && value != 0 && (n_array[i + 1] != 0 && n_array[i + 2] != 0)) {",
+					"                        words_string += \"hundred and \";",
+					"                } else if (i == 6 && value != 0) {",
+					"                        words_string += \"hundred \";",
+					"                }",
+					"            }",
+					"            words_string = words_string.split(\"  \").join(\" \");",
+					"        }",
+					"        var ret = extension += words_string;",
+					"        return ret;",
+					"    }",
+					"    return utils;",
+					"} + '; loadUtilsENUS();');",
+					"tests['Utils initialized'] = true;"
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "1b5ac3c4-8f5d-46c6-b887-4cad4c26d833",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"protocolProfileBehavior": {}
+}

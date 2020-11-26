@@ -1,0 +1,1 @@
+newman run "D:\Projetos\Postman\desafio de QA da Delivery Much!.postman_collection.json" -d "D:\Projetos\Postman\Resources\NumbersData[pt_BR].json" --folder DataDriven[pt_BR] -r allure --reporter-allure-export "D:\Projetos\Postman\Executors\1-Reports"

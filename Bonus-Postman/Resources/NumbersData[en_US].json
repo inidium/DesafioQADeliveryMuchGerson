@@ -1,0 +1,87 @@
+[
+	{
+		"number" : -10001,
+		"numberFullExpected" : "Invalid data",
+		"statusCodeExpected" : 400
+	},
+	{
+		"number" : -10000,
+		"numberFullExpected" : "minus ten thousand",
+		"statusCodeExpected" : 200
+	},
+	{
+		"number" : -9999,
+		"numberFullExpected" : "minus nine thousand, nine hundred and ninety-nine",
+		"statusCodeExpected" : 200
+	},
+	{
+		"number" : -5764,
+		"numberFullExpected" : "minus five thousand, seven hundred and sixty-four",
+		"statusCodeExpected" : 200
+	},
+	{
+		"number" : -1542,
+		"numberFullExpected" : "minus one thousand, five hundred and forty-two",
+		"statusCodeExpected" : 200
+	},
+	{
+		"number" : -17,
+		"numberFullExpected" : "minus seventeen",
+		"statusCodeExpected" : 200
+	},
+	{
+		"number" : -10,
+		"numberFullExpected" : "minus ten",
+		"statusCodeExpected" : 200
+	},
+	{
+		"number" : -1,
+		"numberFullExpected" : "minus one",
+		"statusCodeExpected" : 200
+	},
+	{
+		"number" : 0,
+		"numberFullExpected" : "zero",
+		"statusCodeExpected" : 200
+	},
+	{
+		"number" : 1,
+		"numberFullExpected" : "one",
+		"statusCodeExpected" : 200
+	},
+	{
+		"number" : 10,
+		"numberFullExpected" : "ten",
+		"statusCodeExpected" : 200
+	},
+	{
+		"number" : 17,
+		"numberFullExpected" : "seventeen",
+		"statusCodeExpected" : 200
+	},
+	{
+		"number" : 1542,
+		"numberFullExpected" : "mil one thousand, five hundred and forty-two",
+		"statusCodeExpected" : 200
+	},
+	{
+		"number" : 5764,
+		"numberFullExpected" : "five thousand, seven hundred and sixty-four",
+		"statusCodeExpected" : 200
+	},
+	{
+		"number" : 9999,
+		"numberFullExpected" : "nine thousand, nine hundred and ninety-nine",
+		"statusCodeExpected" : 200
+	},
+	{
+		"number" : 10000,
+		"numberFullExpected" : "ten thousand",
+		"statusCodeExpected" : 200
+	},
+	{
+		"number" : 10001,
+		"numberFullExpected" : "Invalid data",
+		"statusCodeExpected" : 400
+	}
+]

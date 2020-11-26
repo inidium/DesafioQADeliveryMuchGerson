@@ -1,0 +1,87 @@
+[
+	{
+		"number" : -10001,
+		"numberFullExpected" : "Invalid data",
+		"statusCodeExpected" : 400
+	},
+	{
+		"number" : -10000,
+		"numberFullExpected" : "menos dez mil",
+		"statusCodeExpected" : 200
+	},
+	{
+		"number" : -9999,
+		"numberFullExpected" : "menos nove mil novecentos e noventa e nove",
+		"statusCodeExpected" : 200
+	},
+	{
+		"number" : -5764,
+		"numberFullExpected" : "menos cinco mil setecentos e sessenta e quatro",
+		"statusCodeExpected" : 200
+	},
+	{
+		"number" : -1542,
+		"numberFullExpected" : "menos mil quinhentos e quarenta e dois",
+		"statusCodeExpected" : 200
+	},
+	{
+		"number" : -17,
+		"numberFullExpected" : "menos dezessete",
+		"statusCodeExpected" : 200
+	},
+	{
+		"number" : -10,
+		"numberFullExpected" : "menos dez",
+		"statusCodeExpected" : 200
+	},
+	{
+		"number" : -1,
+		"numberFullExpected" : "menos um",
+		"statusCodeExpected" : 200
+	},
+	{
+		"number" : 0,
+		"numberFullExpected" : "zero",
+		"statusCodeExpected" : 200
+	},
+	{
+		"number" : 1,
+		"numberFullExpected" : "um",
+		"statusCodeExpected" : 200
+	},
+	{
+		"number" : 10,
+		"numberFullExpected" : "dez",
+		"statusCodeExpected" : 200
+	},
+	{
+		"number" : 17,
+		"numberFullExpected" : "dezessete",
+		"statusCodeExpected" : 200
+	},
+	{
+		"number" : 1542,
+		"numberFullExpected" : "mil quinhentos e quarenta e dois",
+		"statusCodeExpected" : 200
+	},
+	{
+		"number" : 5764,
+		"numberFullExpected" : "cinco mil setecentos e sessenta e quatro",
+		"statusCodeExpected" : 200
+	},
+	{
+		"number" : 9999,
+		"numberFullExpected" : "nove mil novecentos e noventa e nove",
+		"statusCodeExpected" : 200
+	},
+	{
+		"number" : 10000,
+		"numberFullExpected" : "dez mil",
+		"statusCodeExpected" : 200
+	},
+	{
+		"number" : 10001,
+		"numberFullExpected" : "Invalid data",
+		"statusCodeExpected" : 400
+	}
+]

@@ -35,7 +35,9 @@ Os testes do projeto têm requisitos para serem executados, alguns softwares e c
 	O maven é responsável de puxar as dependências do projeto para a sua máquina, ele também é o responsável por chamar o Java e compilar o projeto, além de executar os testes por ele de maneira fácil.
 3. [**Allure Framework**](https://docs.qameta.io/allure/#_windows)
 	O Allure é o gerador de relatórios personalizado, a pasta do projeto `allure-results` armazena os dados das execuções, para ser extraído e gerado uma linda página com gráficos e detalhes dos testes.
-
+	
+	
+[![Variáveis](https://github.com/inidium/DesafioQADeliveryMuchGerson/blob/master/Resource/Images%20Documentation/Variables.png?raw=true "Variáveis")](https://github.com/inidium/DesafioQADeliveryMuchGerson/blob/master/Resource/Images%20Documentation/Variables.png?raw=true "Variáveis")
 
 
 **Important**
@@ -43,8 +45,11 @@ Caso não queira instalar o `Allure Framework`, não preocupe-se, você poderá 
 
 ## Recomendações
 Como o projeto usa o Quimera, e o mesmo utiliza o TestNG além de ser programado na IDE Eclipse. Recomendo que caso não possua faça o [Download do Eclipse](https://www.eclipse.org/downloads/), e ao abrir o mesmo, ir até o marketplace e instalar o plugin do TestNG, conforme recomendado na própria página do [TestNG](https://testng.org/doc/eclipse.html).
+
 **Important**
 Muito importante que os requisitos já devem estar atendidos, além disso, não é necessário acrescentar o TestNG ao POM.xml do projeto, apenas instalar a extensão.
+
+[![](https://github.com/inidium/DesafioQADeliveryMuchGerson/blob/master/Resource/Images%20Documentation/MarketTestNG.png?raw=true)](https://github.com/inidium/DesafioQADeliveryMuchGerson/blob/master/Resource/Images%20Documentation/MarketTestNG.png?raw=true)
 
 ## Arquivo de Configuração
 O Quimera usa um arquivo de configuração chamado de `TestEnvironmentConfigurationFile`, este é um arquivo Json. Para este projeto não precisaremos preenchê-lo tanto, apenas o que relacionado a API que iremos validar, ou seja, iremos preencher o `Protocol` e o `Host` do node `HttpConfigs`, teremos algo assim:
@@ -120,12 +125,21 @@ Antes de executar os testes propriamente dito, execute primeiramente os comandos
 mvn clean
 mvn compile
 ```
+
+[![](https://github.com/inidium/DesafioQADeliveryMuchGerson/blob/master/Resource/Images%20Documentation/CommandMVNClean.png?raw=true)](https://github.com/inidium/DesafioQADeliveryMuchGerson/blob/master/Resource/Images%20Documentation/CommandMVNClean.png?raw=true)
+
+[![](https://github.com/inidium/DesafioQADeliveryMuchGerson/blob/master/Resource/Images%20Documentation/CommandMVNCompile.png?raw=true)](https://github.com/inidium/DesafioQADeliveryMuchGerson/blob/master/Resource/Images%20Documentation/CommandMVNCompile.png?raw=true)
+
 Feito isso uma tela preta com a descrição `Build Succefull` deverá ser exibida, após isso você pode executar os comandos para os testes maven, por exemplo digamos que queira executar ambas as classes. Para isso basta usar o comando:
 ```
 mvn -Dtest=ValidateExtendNumberPTBR,ValidateExtendNumberENUS -DfailIfNoTests=false test
 ```
 
+[![](https://github.com/inidium/DesafioQADeliveryMuchGerson/blob/master/Resource/Images%20Documentation/InitialExecutionTest.png?raw=true)](https://github.com/inidium/DesafioQADeliveryMuchGerson/blob/master/Resource/Images%20Documentation/InitialExecutionTest.png?raw=true)
+
 Legal você vai ver altas letrinhas subindo pelo prompt, indicando que os testes estão sendo efetuados.
+
+[![](https://github.com/inidium/DesafioQADeliveryMuchGerson/blob/master/Resource/Images%20Documentation/ExecutionTestResult.png?raw=true)](https://github.com/inidium/DesafioQADeliveryMuchGerson/blob/master/Resource/Images%20Documentation/ExecutionTestResult.png?raw=true)
 
 A princípio a execução por Prompt é isto no momento, podemos acrescentar Tags, Story e outros atributos nos testes para facilitar a busca de testes, além do TestNG permitir criar suites de testes.
 
@@ -145,8 +159,52 @@ allure serve "D:\Projetos\Provas\Workspace\automation_test\allure-results"
 ```
 Espere o navegador abrir e Voilá, temos um relatório incremental, dinâmico e bonito prontinho.
 
+[![](https://github.com/inidium/DesafioQADeliveryMuchGerson/blob/master/Resource/Images%20Documentation/AllureReport.png?raw=true)](https://github.com/inidium/DesafioQADeliveryMuchGerson/blob/master/Resource/Images%20Documentation/AllureReport.png?raw=true)
+
 ## Extração de Relatório (Padrão TestNG)
 Bom se você não se interessa pelo relatório do Allure, ou não conseguiu instalar o mesmo, não se apavore, ainda temos um relatório criado por padrão pelo TestNG, este que não é tão bonito, porém ainda tem as informações básicas que precisamos, encontra-se na pasta `test-output`, que fica na raiz do seu projeto. 
 
 **Important**
 Só um ponto de atenção, este relatório não é acumulativo como o Allure ou outros, se você executar um teste as informações do teste anterior se perdem para dar lugar as novas.
+
+
+
+------------
+
+------------
+
+
+# Bônus (Postman Test)
+Bom, tirei um pouco da poeira do postman, e fiz um exemplo das APIs utilizando também datadriven, além de uma validação simples do código de retorno da API.
+
+Para executar é necessário ter o [Node](https://nodejs.org/pt-br/download/), além disso instalar o [Newman](https://www.npmjs.com/package/newman), também é interessante instalar o [Allure para o newman](https://www.npmjs.com/package/newman-reporter-allure) para poder extrair os relatórios como no projeto Java.
+
+## Como funciona
+De inicio o .json com a Collection `desafio de QA da Delivery Much!.postman_collection.json` que possui os testes está na pasta `Bonus-Postman`, na raiz deste projeto.
+Depois de instalado o `newman` e o `newman-reporter-aullure`, basta editar os arquivo .bat que estão na pasta `Executors`.
+
+Basicamente cada .bat tem uma linha de comando para chamar um teste, por exemplo, temos a pasta `3-DataDrivenTests` e dentro dela o .bat `2 - Execute DataDriven Tests [en_US]`, ao abrir, vamos no deparar com o comando:
+
+```
+newman run "D:\Projetos\Postman\desafio de QA da Delivery Much!.postman_collection.json" -d "D:\Projetos\Postman\Resources\NumbersData[en_US].json" --folder DataDriven[en_US] newman run "D:\Projetos\Postman\desafio de QA da Delivery Much!.postman_collection.json" --folder DataDriven[en_US] -r allure --reporter-allure-export "D:\Projetos\Postman\Executors\1-Reports"
+```
+
+Nota-se que o comando está com os diretórios da minha máquina, então ao tentar rodar obviamente um erro irá acontecer. Então basicamente troque os caminhos para o caminhos da sua máquina antes de executar o .bat. 
+
+Para facilitar vou colocar aqui um .bat de cada genérico com o que deve ser alterado, primeiramente os da pasta `2-AleatoryTests`:
+
+```
+newman run "<CaminhoAtéOJsonDaCollection>" --folder AleatoryNumber[en_US] -r allure --reporter-allure-export "<CaminhoAtéOAPastaDeReport>"
+```
+
+Onde o <CaminhoAtéOJsonDaCollection> se da na pasta Bonus-Postman, e o <CaminhoAtéOAPastaDeReport> até na pasta `Bonus-Postman->Executors->1-Reports`.
+
+Já para os .Bats da pasta `3-DataDrivenTests` eles tem um parâmetro a mais:
+
+```
+newman run "<CaminhoAtéOJsonDaCollection>" -d "<CaminhoAtéOJsonDosDados>" --folder DataDriven[pt_BR] -r allure --reporter-allure-export "<CaminhoAtéOAPastaDeReport>"
+```
+Já neste nota-se que tem um caminho a mais, este caminho é o que vai até o json com os dados para execução da rotina, geralmente em `Bonus-Postman->Resources`.
+
+## Como Extrair Dados
+Para extrair as informações, você pode executar o comando `Allure serve "<pasta 1-Reports>"` onde `<pasta 1-Reports>` será o caminho da pasta de reports que fica dentro da pasta `Bonus-Postman->Executors`

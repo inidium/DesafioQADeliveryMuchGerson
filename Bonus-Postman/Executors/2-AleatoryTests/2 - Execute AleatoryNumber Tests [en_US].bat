@@ -1,0 +1,1 @@
+newman run "D:\Projetos\Postman\desafio de QA da Delivery Much!.postman_collection.json" --folder AleatoryNumber[en_US] -r allure --reporter-allure-export "D:\Projetos\Postman\Executors\1-Reports"
